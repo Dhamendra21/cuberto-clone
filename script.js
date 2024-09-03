@@ -24,14 +24,16 @@ function carousal(){
 ]
 let carosouls = document.querySelector("#carosouls")
 data.forEach(e=>{
+
     carosouls.innerHTML += `
-    <div class="card flex-shrink-0 w-[100%]">
+    <div class="card flex-shrink-0 w-[30%]">
             <img src="${e.src}" alt="">
             <p class="text-2xl pt-3">${e.text}</p>
           </div>
     `
 })
 }
+
 
 function shery(){
   Shery.mouseFollower({
@@ -74,7 +76,6 @@ function shery(){
 let video = document.querySelectorAll('video')
 video.forEach(e=>{
   e.addEventListener('mouseenter',()=>{
-    console.log("mouse aaya")
     e.play()
   })
   e.addEventListener('mouseleave',()=>{
