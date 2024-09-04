@@ -144,8 +144,8 @@ btn.addEventListener("mouseleave",()=>{
 
 tl.to(".p1-heading", {
   y:0,
-  stagger:0.8,
-  duration:2,
+  stagger:0.2,
+  duration:0.5,
   ease:"power3"
 })
 
@@ -158,6 +158,14 @@ gsap.to(".p4-text", {
     start: "top 50%"
   }
 });
+let marqee = document.querySelector("#marqee")
+console.log(marqee)
+gsap.to(marqee, {
+  xPercent: -100,
+  ease: "linear",
+  duration: 10,
+  repeat: -1,
+});
 
 }   
 
@@ -165,3 +173,4 @@ carousal()
 shery()
 locomotive()
 animation()
+
