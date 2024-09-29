@@ -26,9 +26,9 @@ let carosouls = document.querySelector("#carosouls")
 data.forEach(e=>{
 
     carosouls.innerHTML += `
-    <div class="card flex-shrink-0 w-[30%]">
-            <img src="${e.src}" alt="">
-            <p class="text-2xl pt-3">${e.text}</p>
+    <div class="card max-sm:w-full flex-shrink-0 w-[30%]">
+            <img class="rounded-sm" src="${e.src}" alt="">
+            <p class="text-2xl max-sm:text-xl pt-3">${e.text}</p>
           </div>
     `
 })
@@ -73,7 +73,7 @@ function shery(){
   
 
 }
-let video = document.querySelectorAll('video')
+let video = document.querySelectorAll('.video')
 video.forEach(e=>{
   e.addEventListener('mouseenter',()=>{
     e.play()
@@ -154,7 +154,7 @@ gsap.to(".p4-text", {
   scrollTrigger:{
     trigger:'.page4',
     scroller:".main",
-    markers:true,
+    // markers:true,
     start: "top 50%"
   }
 });
